@@ -1,6 +1,7 @@
 header {
   height: 70px;
   width: 100%;
+  min-width: 320px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -19,7 +20,7 @@ header {
   width: 4rem;
   height: 4rem;
   position: absolute;
-  left: -30px;
+  left: -10px;
   background-color: $primary-color-light;
   border-radius: 50%;
   z-index: 2;
@@ -29,6 +30,12 @@ header {
   border: 1px solid rgba(0, 0, 0, 0.25);
   box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.65),
     -2px -2px 10px rgba(0, 0, 0, 0.25);
+
+    @include media(tablet ){
+      left: -30px;
+    }
+
+    
 }
 
 .headerContainer-icon a svg {
@@ -39,13 +46,17 @@ header {
 .headerContainer .headerContainer-back-icon {
   width: 70px;
   position: relative;
-  left: -30px;
+  left: -10px;
   height: 3rem;
   border-radius: 40px;
   z-index: 1;
   background: rgba(54, 138, 236, 0.25);
   box-shadow: inset -8px -10px 15px rgba(255, 255, 255, 0.65),
     inset 10px 10px 10px rgba(0, 0, 0, 0.25);
+    
+  @include media(tablet ){
+    left: -30px;
+  }
 }
 
 .headerContainer .stroke {

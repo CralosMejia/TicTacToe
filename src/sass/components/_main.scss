@@ -2,6 +2,7 @@ main {
     background-color: $primary-color-light;
     display: flex;
     width: 100%;
+    min-width: 320px;
     height: 80vh;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -10,13 +11,13 @@ main {
   }
 
   main .title {
-    width: 75rem;
+    width: 30rem;
     height: 9.5rem;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: .7rem;
     background-color: $secondary-color-light;
     border-radius: 20px;
-    font-size: 6rem;
+    font-size: 5rem;
     font-family: $font1;
     border: 2px solid rgba(0, 0, 0, 0.25);
     box-shadow: -8px -10px 15px rgba(224, 224, 224, 0.65),
@@ -25,12 +26,27 @@ main {
     font-weight: normal;
     line-height: 83px;
     color: $primary-font-color-light;
-    margin-top: 12rem;
-    margin-bottom: 9rem;
+    margin-top: 8rem;
+    margin-bottom: 7rem;
+
+    @include media(mobile ){
+      width: 40rem;
+    }
+    @include media(tablet){
+      width: 65rem;
+    }
+    @include media(desktop){
+      width: 75rem;
+      font-size: 6rem;
+      padding-top: 1rem;
+      margin-top: 12rem;
+      margin-bottom: 9rem;
+    }
+    
   }
   
   main .button-light {
-    width: 40.6rem;
+    width: 20.6rem;
     height: 7.9rem;
     border-radius: 40px;
     background: $secondary-color-light;
@@ -38,13 +54,27 @@ main {
     box-shadow: -8px -10px 15px rgba(224, 224, 224, 0.65),
       10px 10px 10px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
-    margin-bottom: 3rem;
+    margin-bottom: 7rem;
     font-family: $font2;
     font-style: normal;
     font-weight: normal;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 56px;
     color: $secondary-font-color-light;
+
+    @include media(mobile ){
+      width: 25rem;
+    }
+
+    @include media(tablet){
+      width: 35.6rem;
+    }
+
+    @include media(desktop ){
+      width: 40.6rem;
+      font-size: 4rem;
+      margin-bottom: 3rem;
+    }
   }
 
   main .button-light:hover {
