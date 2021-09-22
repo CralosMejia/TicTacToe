@@ -29,48 +29,7 @@ header {
           justify-content: flex-end;
   background-color: #f6f6f9;
 }
-
-main {
-  background-color: #f6f6f9;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 80vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer {
-  width: 100%;
-  height: 15vh;
-  background: rgba(138, 146, 165, 0.05);
-  border-top: 3px solid rgba(0, 0, 0, 0.05);
-  -webkit-box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.3);
-          box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.3);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-bottom: 3rem;
-}
-
-.headerContainer {
+header .headerContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,7 +46,7 @@ footer {
   height: 4rem;
   position: absolute;
   left: -30px;
-  background-color: #eeeff2;
+  background-color: #f6f6f9;
   border-radius: 50%;
   z-index: 2;
   display: -webkit-box;
@@ -132,6 +91,39 @@ footer {
   border-radius: 40px;
 }
 
+.headerContainer .headerContainer-icon:hover {
+  background-color: #c7c9cf;
+  -webkit-transition: 900ms;
+  transition: 900ms;
+  border: none;
+}
+.headerContainer .headerContainer-icon:hover .sun-icon {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  fill: #ffffff;
+}
+
+main {
+  background-color: #f6f6f9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 main .title {
   width: 75rem;
   height: 9.5rem;
@@ -170,11 +162,6 @@ main .button-light {
   color: #5c5d60;
 }
 
-footer a svg {
-  width: 5.4rem;
-  height: 5.4rem;
-}
-
 main .button-light:hover {
   background-color: #c7c9cf;
   -webkit-transition: 600ms;
@@ -182,16 +169,28 @@ main .button-light:hover {
   color: #45474e;
 }
 
-.headerContainer .headerContainer-icon:hover {
-  background-color: #c7c9cf;
-  -webkit-transition: 900ms;
-  transition: 900ms;
-  border: none;
+footer {
+  width: 100%;
+  height: 15vh;
+  background-color: rgba(138, 146, 165, 0.05);
+  border-top: 3px solid rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.3);
+          box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 3rem;
 }
-.headerContainer .headerContainer-icon:hover .sun-icon {
-  -webkit-transition: 300ms;
-  transition: 300ms;
-  fill: #ffffff;
+
+footer a svg {
+  width: 5.4rem;
+  height: 5.4rem;
 }
 
 footer a:hover .gitHub-icon {

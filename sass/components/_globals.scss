@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
+$font1: "Rubik", sans-serif;
+$font2: Roboto;
+$primary-font-color-light:#39cde2;
+$secondary-font-color-light:#5c5d60;
+$primary-color-light:#f6f6f9;
+$secondary-color-light:#eeeff2;
+$tertiary-color-light:rgba(138, 146, 165, 0.05);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  overflow-y: hidden;
+}
