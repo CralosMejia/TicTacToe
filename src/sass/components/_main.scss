@@ -1,20 +1,19 @@
 main {
-    background-color: $primary-color-light;
-    display: flex;
-    width: 100%;
-    min-width: 320px;
-    height: 80vh;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: start;
-    align-items: center;
-  }
+  background-color: $primary-color-light;
+  display: flex;
+  width: 100%;
+  min-width: 320px;
+  height: 75vh;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
 
-  main .title {
+  .title {
     width: 30rem;
     height: 9.5rem;
     text-align: center;
-    padding-top: .7rem;
+    padding-top: 0.7rem;
     background-color: $secondary-color-light;
     border-radius: 20px;
     font-size: 5rem;
@@ -26,26 +25,25 @@ main {
     font-weight: normal;
     line-height: 83px;
     color: $primary-font-color-light;
-    margin-top: 8rem;
-    margin-bottom: 7rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
 
-    @include media(mobile ){
+    @include media(mobile) {
       width: 40rem;
     }
-    @include media(tablet){
+    @include media(tablet) {
       width: 65rem;
     }
-    @include media(desktop){
+    @include media(desktop) {
       width: 75rem;
       font-size: 6rem;
       padding-top: 1rem;
       margin-top: 12rem;
       margin-bottom: 9rem;
     }
-    
   }
-  
-  main .button-light {
+
+  .button-light {
     width: 20.6rem;
     height: 7.9rem;
     border-radius: 40px;
@@ -54,31 +52,139 @@ main {
     box-shadow: -8px -10px 15px rgba(224, 224, 224, 0.65),
       10px 10px 10px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
-    margin-bottom: 7rem;
+    margin-bottom: 2rem;
     font-family: $font2;
     font-style: normal;
     font-weight: normal;
     font-size: 3rem;
     line-height: 56px;
     color: $secondary-font-color-light;
-
-    @include media(mobile ){
+  
+    @include media(mobile) {
       width: 25rem;
     }
-
-    @include media(tablet){
+  
+    @include media(tablet) {
       width: 35.6rem;
     }
-
-    @include media(desktop ){
+  
+    @include media(desktop) {
       width: 40.6rem;
       font-size: 4rem;
       margin-bottom: 3rem;
     }
   }
 
-  main .button-light:hover {
+  .button-light:hover {
     background-color: #c7c9cf;
     transition: 600ms;
     color: #45474e;
   }
+
+  .title-turn {
+    text-align: center;
+    color: $primary-font-color-light;
+    font-family: $font1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.4rem;
+    line-height: 3.6rem;
+    text-align: center;
+  }
+
+  .container-board{
+    width: 25rem;
+    height: 26rem;
+    background-color: $secondary-color-light;
+    border-radius: 25px;
+    border: 1px #8c8c8d solid;
+    box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.65), 10px 10px 10px rgba(0, 0, 0, 0.25);
+
+    .container-board-into{
+      width: 25rem;
+      height: 26rem;
+      border-radius: 25px;
+      box-shadow: inset -8px -10px 15px rgba(255, 255, 255, 0.65), inset 10px 10px 10px rgba(0, 0, 0, 0.25);
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(3,1fr);
+      padding: 1.5rem;
+
+      .button-xo{
+        background:none;
+        font-size: 6rem;
+        font-family: $font1;
+        color: $secondary-font-color-light;
+        border: none;
+      }
+
+      .position-1, .position-2, .position-3,.position-4, .position-5, .position-6{
+        border-bottom:.8rem solid black;
+      }
+      .position-1, .position-2, .position-4, .position-5,.position-7, .position-8{
+        border-right:.8rem solid black;
+      }
+    }
+  }
+
+  .score{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 1.2rem;
+
+    .score-title{
+      display: grid;
+      grid-template-columns: 1fr .5fr 1fr;
+
+      .Player1{
+        justify-self:end ;
+      }
+      .tie{
+        justify-self: center;
+      }
+      .Player2{
+        justify-self: start;
+      }
+
+      b{
+        font-size: 1.8rem;
+        font-family: $font1;
+        color: $primary-font-color-light;
+        font-weight:600;
+      }
+
+    }
+
+    .score-points{
+      display: grid;
+      grid-template-columns: 1fr .5fr 1fr;
+      margin-top: 0.5rem;
+
+      b{
+        justify-self: center; 
+        color: $secondary-font-color-light;
+        font-family: $font1;
+        font-size: 2.6rem;       
+      }
+    }
+  }
+
+  .button-back{
+    width:18rem;
+    height: 3.8rem;
+    margin-top: 1rem;
+    font-size: 3rem; 
+    display: flex;
+    b{
+      align-self: center;
+      width: 100%;
+      color: $secondary-font-color-light;
+      font-weight:300;
+    }
+  }
+}
+
+

@@ -17,7 +17,7 @@ body {
 /* Media Queries Mixin
 **********************/
 header {
-  height: 70px;
+  height: 6rem;
   width: 100%;
   min-width: 320px;
   display: -webkit-box;
@@ -43,12 +43,12 @@ header .headerContainer {
   height: 100%;
   width: auto;
 }
-
-.headerContainer .headerContainer-icon {
-  width: 4rem;
-  height: 4rem;
+header .headerContainer .headerContainer-icon {
+  width: 3.5rem;
+  height: 3.5rem;
   position: absolute;
   left: -10px;
+  top: 2rem;
   background-color: #f6f6f9;
   border-radius: 50%;
   z-index: 2;
@@ -66,41 +66,38 @@ header .headerContainer {
           box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.65), -2px -2px 10px rgba(0, 0, 0, 0.25);
 }
 @media only screen and (min-width: 800px) {
-  .headerContainer .headerContainer-icon {
+  header .headerContainer .headerContainer-icon {
     left: -30px;
   }
 }
-
-.headerContainer-icon a svg {
-  width: 3.1rem;
-  height: 3.1rem;
+header .headerContainer .headerContainer-icon a svg {
+  width: 2.5rem;
+  height: 2.5rem;
 }
-
-.headerContainer .headerContainer-back-icon {
-  width: 70px;
+header .headerContainer .headerContainer-back-icon {
+  width: 6rem;
   position: relative;
   left: -10px;
-  height: 3rem;
+  top: 0.7rem;
+  height: 2.5rem;
   border-radius: 40px;
   z-index: 1;
-  background: rgba(54, 138, 236, 0.25);
-  -webkit-box-shadow: inset -8px -10px 15px rgba(255, 255, 255, 0.65), inset 10px 10px 10px rgba(0, 0, 0, 0.25);
-          box-shadow: inset -8px -10px 15px rgba(255, 255, 255, 0.65), inset 10px 10px 10px rgba(0, 0, 0, 0.25);
+  background: #368aec;
+  -webkit-box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.65), 10px 10px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.65), 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 @media only screen and (min-width: 800px) {
-  .headerContainer .headerContainer-back-icon {
+  header .headerContainer .headerContainer-back-icon {
     left: -30px;
   }
 }
-
-.headerContainer .stroke {
+header .headerContainer .headerContainer-back-icon .stroke {
   background-color: #368aec;
   -webkit-box-shadow: inset -8px -10px 15px rgba(255, 255, 255, 0.65), inset 10px 10px 10px rgba(0, 0, 0, 0.25);
           box-shadow: inset -8px -10px 15px rgba(255, 255, 255, 0.65), inset 10px 10px 10px rgba(0, 0, 0, 0.25);
-  width: 70px;
+  width: 6rem;
   position: absolute;
-  left: 0px;
-  height: 3rem;
+  height: 2.5rem;
   border-radius: 40px;
 }
 
@@ -123,7 +120,7 @@ main {
   display: flex;
   width: 100%;
   min-width: 320px;
-  height: 80vh;
+  height: 75vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -137,7 +134,6 @@ main {
       -ms-flex-align: center;
           align-items: center;
 }
-
 main .title {
   width: 30rem;
   height: 9.5rem;
@@ -154,8 +150,8 @@ main .title {
   font-weight: normal;
   line-height: 83px;
   color: #39cde2;
-  margin-top: 8rem;
-  margin-bottom: 7rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 @media only screen and (min-width: 480px) {
   main .title {
@@ -176,7 +172,6 @@ main .title {
     margin-bottom: 9rem;
   }
 }
-
 main .button-light {
   width: 20.6rem;
   height: 7.9rem;
@@ -186,7 +181,7 @@ main .button-light {
   -webkit-box-shadow: -8px -10px 15px rgba(224, 224, 224, 0.65), 10px 10px 10px rgba(0, 0, 0, 0.25);
           box-shadow: -8px -10px 15px rgba(224, 224, 224, 0.65), 10px 10px 10px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
-  margin-bottom: 7rem;
+  margin-bottom: 2rem;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -211,18 +206,168 @@ main .button-light {
     margin-bottom: 3rem;
   }
 }
-
 main .button-light:hover {
   background-color: #c7c9cf;
   -webkit-transition: 600ms;
   transition: 600ms;
   color: #45474e;
 }
+main .title-turn {
+  text-align: center;
+  color: #39cde2;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.4rem;
+  line-height: 3.6rem;
+  text-align: center;
+}
+main .container-board {
+  width: 25rem;
+  height: 26rem;
+  background-color: #eeeff2;
+  border-radius: 25px;
+  border: 1px #8c8c8d solid;
+  -webkit-box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.65), 10px 10px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.65), 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+main .container-board .container-board-into {
+  width: 25rem;
+  height: 26rem;
+  border-radius: 25px;
+  -webkit-box-shadow: inset -8px -10px 15px rgba(255, 255, 255, 0.65), inset 10px 10px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: inset -8px -10px 15px rgba(255, 255, 255, 0.65), inset 10px 10px 10px rgba(0, 0, 0, 0.25);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+  grid-template-rows: repeat(3, 1fr);
+  padding: 1.5rem;
+}
+main .container-board .container-board-into > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+main .container-board .container-board-into > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+main .container-board .container-board-into > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+main .container-board .container-board-into > *:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+main .container-board .container-board-into > *:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+main .container-board .container-board-into > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+main .container-board .container-board-into > *:nth-child(7) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+main .container-board .container-board-into > *:nth-child(8) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+}
+main .container-board .container-board-into > *:nth-child(9) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+main .container-board .container-board-into .button-xo {
+  background: none;
+  font-size: 6rem;
+  font-family: "Rubik", sans-serif;
+  color: #5c5d60;
+  border: none;
+}
+main .container-board .container-board-into .position-1, main .container-board .container-board-into .position-2, main .container-board .container-board-into .position-3, main .container-board .container-board-into .position-4, main .container-board .container-board-into .position-5, main .container-board .container-board-into .position-6 {
+  border-bottom: 0.8rem solid black;
+}
+main .container-board .container-board-into .position-1, main .container-board .container-board-into .position-2, main .container-board .container-board-into .position-4, main .container-board .container-board-into .position-5, main .container-board .container-board-into .position-7, main .container-board .container-board-into .position-8 {
+  border-right: 0.8rem solid black;
+}
+main .score {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-top: 1.2rem;
+}
+main .score .score-title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.5fr 1fr;
+  grid-template-columns: 1fr 0.5fr 1fr;
+}
+main .score .score-title .Player1 {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+main .score .score-title .tie {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+main .score .score-title .Player2 {
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+main .score .score-title b {
+  font-size: 1.8rem;
+  font-family: "Rubik", sans-serif;
+  color: #39cde2;
+  font-weight: 600;
+}
+main .score .score-points {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.5fr 1fr;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  margin-top: 0.5rem;
+}
+main .score .score-points b {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  color: #5c5d60;
+  font-family: "Rubik", sans-serif;
+  font-size: 2.6rem;
+}
+main .button-back {
+  width: 18rem;
+  height: 3.8rem;
+  margin-top: 1rem;
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .button-back b {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  color: #5c5d60;
+  font-weight: 300;
+}
 
 footer {
   width: 100%;
   min-width: 320px;
-  height: 15vh;
+  height: 18vh;
   background-color: rgba(138, 146, 165, 0.05);
   border-top: 3px solid rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.3);
@@ -237,6 +382,10 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 3rem;
+}
+
+footer a {
+  margin-top: 0.7rem;
 }
 
 footer a svg {
