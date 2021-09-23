@@ -8,9 +8,16 @@ main {
   flex-wrap: nowrap;
   justify-content: start;
   align-items: center;
+  transition: $transition-global;
+
+  body.dark &{
+    background-color: $secondary-color-dark;
+    transition: $transition-global;
+  }
 
   .title {
     width: 30rem;
+    max-width: 50rem;
     height: 9.5rem;
     text-align: center;
     padding-top: 0.7rem;
@@ -25,8 +32,16 @@ main {
     font-weight: normal;
     line-height: 83px;
     color: $primary-font-color-light;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    transition: $transition-global;
+
+    body.dark &{
+      background-color: $primary-color-dark;
+      color: $primary-font-color-dark;
+      box-shadow: $shadow-dark-outside;
+      transition: $transition-global;
+    }
 
     @include media(mobile) {
       width: 40rem;
@@ -45,6 +60,7 @@ main {
 
   .button-light {
     width: 20.6rem;
+    max-width: 25rem;
     height: 7.9rem;
     border-radius: 40px;
     background: $secondary-color-light;
@@ -59,6 +75,15 @@ main {
     font-size: 3rem;
     line-height: 56px;
     color: $secondary-font-color-light;
+    cursor: pointer;
+    transition: $transition-global;
+
+    body.dark &{
+      background-color:$primary-color-dark;
+      box-shadow: $shadow-dark-outside;
+      color: $secondary-font-color-dark;
+      transition: $transition-global;
+    }
   
     @include media(mobile) {
       width: 25rem;
@@ -79,6 +104,13 @@ main {
     background-color: #c7c9cf;
     transition: 600ms;
     color: #45474e;
+
+    body.dark &{
+      background-color:#3f4349;
+      box-shadow: $shadow-dark-outside;
+      color: #e4e7eb;
+      transition: $transition-global;
+    }
   }
 
   .title-turn {
@@ -86,10 +118,16 @@ main {
     color: $primary-font-color-light;
     font-family: $font1;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 3.4rem;
     line-height: 3.6rem;
     text-align: center;
+    transition: $transition-global;
+
+    body.dark &{
+      color:$primary-font-color-dark;
+      transition: $transition-global;
+    }
   }
 
   .container-board{
@@ -99,6 +137,13 @@ main {
     border-radius: 25px;
     border: 1px #8c8c8d solid;
     box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.65), 10px 10px 10px rgba(0, 0, 0, 0.25);
+    transition: $transition-global;
+
+    body.dark &{
+      background-color: $secondary-color-dark;
+      box-shadow: $shadow-dark-outside;
+      transition: $transition-global;
+    }
 
     .container-board-into{
       width: 25rem;
@@ -109,6 +154,13 @@ main {
       grid-template-columns: repeat(3,1fr);
       grid-template-rows: repeat(3,1fr);
       padding: 1.5rem;
+      transition: $transition-global;
+
+      body.dark &{
+        background-color: $secondary-color-dark;
+        box-shadow: inset -3px -3px 20px rgba(255, 255, 255, 0.3), inset 10px 10px 15px ;
+        transition: $transition-global;
+      }
 
       .button-xo{
         background:none;
@@ -116,13 +168,29 @@ main {
         font-family: $font1;
         color: $secondary-font-color-light;
         border: none;
+        transition: $transition-global;
+
+        body.dark &{
+          color: $secondary-font-color-dark;
+          transition: $transition-global;
+        }
       }
 
       .position-1, .position-2, .position-3,.position-4, .position-5, .position-6{
         border-bottom:.8rem solid black;
+        transition: $transition-global;
+        body.dark &{
+          border-bottom:.8rem solid rgb(75, 74, 74);
+          transition: $transition-global;
+        }
       }
       .position-1, .position-2, .position-4, .position-5,.position-7, .position-8{
         border-right:.8rem solid black;
+        transition: $transition-global;
+        body.dark &{
+          border-right:.8rem solid rgb(65, 63, 63);
+          transition: $transition-global;
+        }
       }
     }
   }
@@ -134,19 +202,24 @@ main {
     flex-direction: column;
     flex-wrap: nowrap;
     margin-top: 1.2rem;
+    transition: $transition-global;
 
     .score-title{
       display: grid;
       grid-template-columns: 1fr .5fr 1fr;
+      transition: $transition-global;
 
       .Player1{
         justify-self:end ;
+        transition: $transition-global;
       }
       .tie{
         justify-self: center;
+        transition: $transition-global;
       }
       .Player2{
         justify-self: start;
+        transition: $transition-global;
       }
 
       b{
@@ -154,6 +227,12 @@ main {
         font-family: $font1;
         color: $primary-font-color-light;
         font-weight:600;
+        transition: $transition-global;
+
+        body.dark &{
+          color:$primary-font-color-dark;
+          transition: $transition-global;
+        }
       }
 
     }
@@ -162,27 +241,41 @@ main {
       display: grid;
       grid-template-columns: 1fr .5fr 1fr;
       margin-top: 0.5rem;
+      transition: $transition-global;
 
       b{
         justify-self: center; 
         color: $secondary-font-color-light;
         font-family: $font1;
-        font-size: 2.6rem;       
+        font-size: 2.6rem; 
+        transition: $transition-global; 
+        
+        body.dark &{
+          color:$secondary-font-color-dark;
+          transition: $transition-global;
+        }
       }
     }
   }
 
   .button-back{
-    width:18rem;
-    height: 3.8rem;
+    width:13rem;
+    height: 3.2rem;
     margin-top: 1rem;
-    font-size: 3rem; 
+    font-size: 2.5rem; 
     display: flex;
+    transition: $transition-global;
     b{
       align-self: center;
       width: 100%;
       color: $secondary-font-color-light;
       font-weight:300;
+      transition: $transition-global;
+
+      body.dark &{
+        color:$secondary-font-color-dark;
+        transition: $transition-global;
+      }
     }
   }
 }

@@ -6,81 +6,100 @@ header {
   flex-direction: row;
   justify-content: flex-end;
   background-color: $primary-color-light;
+  transition: $transition-global;
 
-  .headerContainer {
+  body.dark &{
+    background-color: $secondary-color-dark;
+    transition: $transition-global;
+  }
+
+  .container-darckMode{
+    width: 50%;
     display: flex;
-    position: relative;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
-    height: 100%;
-    width: auto;
+    padding-right: 2rem; 
+    transition: $transition-global;
 
-    .headerContainer-icon {
-      width: 3.5rem;
-      height: 3.5rem;
-      position: absolute;
-      left: -10px;
-      top: 2rem;
-      background-color: $primary-color-light;
-      border-radius: 50%;
-      z-index: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid rgba(0, 0, 0, 0.25);
-      box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.65),
-        -2px -2px 10px rgba(0, 0, 0, 0.25);
-    
-        @include media(tablet ){
-          left: -30px;
-        } 
-        
-        a svg {
-          width: 2.5rem;
-          height: 2.5rem;
-        }
-    }
-
-     .headerContainer-back-icon {
+    .switch{
+      height: 3rem;
       width: 6rem;
       position: relative;
-      left: -10px;
-      top: .7rem;
-      height: 2.5rem;
+      cursor: pointer;
+      outline: none;
       border-radius: 40px;
-      z-index: 1;
-      background: rgba(54, 138, 236, 1);
-      box-shadow:  -8px -10px 15px rgba(255, 255, 255, 0.65),
-         10px 10px 10px rgba(0, 0, 0, 0.25);
-        
-      @include media(tablet ){
-        left: -30px;
-      }
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      box-shadow:  -8px -10px 15px rgba(224, 224, 224, 0.65), 10px 10px 10px rgba(0, 0, 0, 0.25);
+      background-color: rgba(52, 61, 91, 0.74);
+      transition: $transition-global;
 
-      .stroke {
-        background-color: rgba(54, 138, 236, 1);
-        box-shadow: inset -8px -10px 15px rgba(255, 255, 255, 0.65),
-          inset 10px 10px 10px rgba(0, 0, 0, 0.25);
-        width: 6rem;
+      &::after{
+        content: "";
+        display: block;
+        width: 3.5rem;
+        height: 3.5rem;
         position: absolute;
-        height: 2.5rem;
-        border-radius: 40px;
+        background: $secondary-color-light;
+        box-shadow: -8px -10px 15px rgba(224, 224, 224, 0.65),
+        10px 10px 40px rgba(0, 0, 0, 0.25);;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        top: -.3rem;
+        left: -.3rem;
+        right: unset;
+        border-radius:100px;
+        transition: .3s ease all;
+        transition: $transition-global;
       }
-      
+
+      &.active{
+        background-color: $secondary-color-light;
+        box-shadow:$shadow-dark-outside ;
+        transition: .3s ease all;
+
+        &::after{
+          top: -.3rem;
+          left: unset;
+          right: -.3rem;
+          background: $primary-color-dark;
+          box-shadow: $shadow-dark-outside;
+          transition: .3s ease all;
+        }
+      }
+
+      .containerStrock{
+        height: 3rem;
+        width: 6rem;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: inset -8px -10px 51px rgba(224, 224, 224, 0.25), inset 10px 10px 10px rgba(0, 0, 0, 0.47);
+        background-color: #515C80;
+        transition: $transition-global;
+
+        span .fa-moon{
+          color: #fff;
+          display: block;
+          font-size: 1.8rem;
+          transition: $transition-global;
+        }
+        span .fa-sun{
+          display: block;
+          font-size: 1.8rem;
+          transition: $transition-global;
+        }
+
+        body.dark &{
+          background-color: $secondary-color-light;
+          box-shadow: $shadow-dark-inset;
+        }
+
+      }
+
     }
-    
   }
+
+  
 }
 
-
-
-
-
-.headerContainer .headerContainer-icon:hover {
-  background-color: #c7c9cf;
-  transition: 900ms;
-  border: none;
-  .sun-icon {
-    transition: 300ms;
-    fill: #ffffff;
-  }
-}

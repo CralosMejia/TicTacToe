@@ -6,147 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tiktaktoe main page">
     <meta name="robots" content="index,follow">
+    <script src="https://kit.fontawesome.com/19f30444a3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/index.css">
     <title>TikTakToe</title>
 </head>
 <body>
     <header>
-        <div class="headerContainer">
-            <div class="headerContainer-icon ">
-                <a href="#"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    width="45.16px" height="45.16px" viewBox="0 0 45.16 45.16" style="enable-background:new 0 0 45.16 45.16;" xml:space="preserve"
-                   >
-               <g>
-                   <g>
-                       <path class="sun-icon" d="M22.58,11.269c-6.237,0-11.311,5.075-11.311,11.312s5.074,11.312,11.311,11.312c6.236,0,11.311-5.074,11.311-11.312
-                           S28.816,11.269,22.58,11.269z"/>
-                       <g>
-                           <g>
-                               <path class="sun-icon" d="M22.58,7.944c-1.219,0-2.207-0.988-2.207-2.206V2.207C20.373,0.988,21.361,0,22.58,0c1.219,0,2.207,0.988,2.207,2.207
-                                   v3.531C24.787,6.956,23.798,7.944,22.58,7.944z"/>
-                           </g>
-                           <g>
-                               <path class="sun-icon" d="M22.58,37.215c-1.219,0-2.207,0.988-2.207,2.207v3.53c0,1.22,0.988,2.208,2.207,2.208c1.219,0,2.207-0.988,2.207-2.208
-                                   v-3.53C24.787,38.203,23.798,37.215,22.58,37.215z"/>
-                           </g>
-                           <g>
-                               <path class="sun-icon" d="M32.928,12.231c-0.861-0.862-0.861-2.259,0-3.121l2.497-2.497c0.861-0.861,2.259-0.861,3.121,0
-                                   c0.862,0.862,0.862,2.26,0,3.121l-2.497,2.497C35.188,13.093,33.791,13.093,32.928,12.231z"/>
-                           </g>
-                           <g>
-                               <path class="sun-icon" d="M12.231,32.93c-0.862-0.863-2.259-0.863-3.121,0l-2.497,2.496c-0.861,0.861-0.862,2.26,0,3.121
-                                   c0.862,0.861,2.26,0.861,3.121,0l2.497-2.498C13.093,35.188,13.093,33.79,12.231,32.93z"/>
-                           </g>
-                           <g>
-                               <path class="sun-icon" d="M37.215,22.58c0-1.219,0.988-2.207,2.207-2.207h3.531c1.219,0,2.207,0.988,2.207,2.207c0,1.219-0.988,2.206-2.207,2.206
-                                   h-3.531C38.203,24.786,37.215,23.799,37.215,22.58z"/>
-                           </g>
-                           <g>
-                               <path class="sun-icon" d="M7.944,22.58c0-1.219-0.988-2.207-2.207-2.207h-3.53C0.988,20.373,0,21.361,0,22.58c0,1.219,0.988,2.206,2.207,2.206
-                                   h3.531C6.956,24.786,7.944,23.799,7.944,22.58z"/>
-                           </g>
-                           <g>
-                               <path class="sun-icon" d="M32.928,32.93c0.862-0.861,2.26-0.861,3.121,0l2.497,2.497c0.862,0.86,0.862,2.259,0,3.12s-2.259,0.861-3.121,0
-                                   l-2.497-2.497C32.066,35.188,32.066,33.791,32.928,32.93z"/>
-                           </g>
-                           <g>
-                               <path class="sun-icon" d="M12.231,12.231c0.862-0.862,0.862-2.259,0-3.121L9.734,6.614c-0.862-0.862-2.259-0.862-3.121,0
-                                   c-0.862,0.861-0.862,2.259,0,3.12l2.497,2.497C9.972,13.094,11.369,13.094,12.231,12.231z"/>
-                           </g>
-                       </g>
-                   </g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               <g>
-               </g>
-               </svg>
-               
-               </a>
-            </div>
-            <div class="headerContainer-back-icon">
-                <div class=" stroke"></div>
-            </div>
+        <div class="container-darckMode">
+            <button class="switch" id="switch">
+                <div class="containerStrock">
+                    <span><i class="fas fa-sun"></i></span>
+                    <span><i class="fas fa-moon"></i></span>
+                </div>
+            </button>
         </div>
     </header>
     <main>
         <h1 class="title">TikTakToe</h1>
-        <button class="button-light">One Player</button>
-        <button class="button-light">Two Player</button>
+        <button class="button-light" id="button-one-player">One Player</button>
+        <button class="button-light" id="button-two-player">Two Player</button>
     </main>
     <footer>
-        <a href="#"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-       <g>
-           <g>
-               <path class="gitHub-icon" d="M255.968,5.329C114.624,5.329,0,120.401,0,262.353c0,113.536,73.344,209.856,175.104,243.872
-                   c12.8,2.368,17.472-5.568,17.472-12.384c0-6.112-0.224-22.272-0.352-43.712c-71.2,15.52-86.24-34.464-86.24-34.464
-                   c-11.616-29.696-28.416-37.6-28.416-37.6c-23.264-15.936,1.728-15.616,1.728-15.616c25.696,1.824,39.2,26.496,39.2,26.496
-                   c22.848,39.264,59.936,27.936,74.528,21.344c2.304-16.608,8.928-27.936,16.256-34.368
-                   c-56.832-6.496-116.608-28.544-116.608-127.008c0-28.064,9.984-51.008,26.368-68.992c-2.656-6.496-11.424-32.64,2.496-68
-                   c0,0,21.504-6.912,70.4,26.336c20.416-5.696,42.304-8.544,64.096-8.64c21.728,0.128,43.648,2.944,64.096,8.672
-                   c48.864-33.248,70.336-26.336,70.336-26.336c13.952,35.392,5.184,61.504,2.56,68c16.416,17.984,26.304,40.928,26.304,68.992
-                   c0,98.72-59.84,120.448-116.864,126.816c9.184,7.936,17.376,23.616,17.376,47.584c0,34.368-0.32,62.08-0.32,70.496
-                   c0,6.88,4.608,14.88,17.6,12.352C438.72,472.145,512,375.857,512,262.353C512,120.401,397.376,5.329,255.968,5.329z"/>
-           </g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       <g>
-       </g>
-       </svg></a>
+        <a href="#"><i class="fab fa-github"></i></a>
     </footer>
+    <script src="../js/darckMode.js"></script>
+    <script src="../js/changePages.js"></script>
 </body>
 </html>

@@ -9,25 +9,39 @@ footer {
     justify-content: center;
     align-items: center;
     padding-bottom: 3rem;
-  }
-  
-  
-  footer a{
-    margin-top: .7rem;
-  }
-  
-  footer a svg {
-    width: 5.4rem;
-    height: 5.4rem;
-  }
-  
-  
-  
-  
-  
-  footer a:hover {
-    .gitHub-icon {
-      transition: 900ms;
-      fill: #a0a2a7;
+    transition: $transition-global;
+
+    body.dark &{
+      background-color: $secondary-color-dark;
+      transition: $transition-global;
+    }
+
+    a{
+      margin-top: .7rem;
+    }
+
+    i {
+      width: 5.4rem;
+      height: 5.4rem;
+      font-size: 5rem;
+      color: black;
+      cursor: pointer;
+      transition: $transition-global;
+
+      body.dark &{
+        color: $secondary-font-color-dark;
+        transition: $transition-global;
+      }
+
+      &:hover{
+        transition: 900ms;
+        color: #a0a2a7;
+
+        body.dark &{
+          color: #9d9d9e;
+          transition: $transition-global;
+        }
+      }
     }
   }
+  

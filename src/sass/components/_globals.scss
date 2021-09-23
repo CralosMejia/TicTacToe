@@ -7,7 +7,13 @@ $secondary-font-color-light:#5c5d60;
 $primary-color-light:#f6f6f9;
 $secondary-color-light:#eeeff2;
 $tertiary-color-light:rgba(138, 146, 165, 0.05);
-
+$primary-color-dark:#2C2F34;
+$secondary-color-dark:rgba(44, 47, 52, 0.9);;
+$primary-font-color-dark:#57D2D8;
+$secondary-font-color-dark:#CCCFD4;
+$shadow-dark-outside:-3px -3px 15px rgba(255, 255, 255, 0.3), 10px 10px 10px rgba(0, 0, 0, 0.6);
+$shadow-dark-inset: inset -3px -3px 100px rgba(255, 255, 255, 0.3), inset 10px 10px 10px rgba(0, 0, 0, 0.6);
+$transition-global:.5s ease all;
 
 * {
   margin: 0;
