@@ -457,6 +457,36 @@ body.dark main .container-board .container-board-into .position-1, body.dark mai
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }
+main .container-board .container-board-into .win {
+  color: #39cde2;
+  font-size: 6.5rem;
+  font-weight: 600;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+@media only screen and (min-height: 750px) {
+  main .container-board .container-board-into .win {
+    font-size: 10rem;
+    font-weight: 600;
+    -webkit-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+  }
+}
+body.dark main .container-board .container-board-into .win {
+  color: #57D2D8;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+main .container-board .container-board-into .lose {
+  color: #00000041;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark main .container-board .container-board-into .lose {
+  color: #646262;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
 main .score {
   width: 100%;
   height: auto;

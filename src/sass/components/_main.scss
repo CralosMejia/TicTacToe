@@ -247,6 +247,33 @@ main {
           transition: $transition-global;
         }
       }
+
+      .win{
+        color: $primary-font-color-light;
+        font-size: 6.5rem;
+        font-weight:600 ;
+        transition: $transition-global;
+
+        @include media(desktop-h1){
+          font-size: 10rem;
+          font-weight:600 ;
+          transition: $transition-global;
+        }
+
+        body.dark &{
+          color:$primary-font-color-dark;
+          transition: $transition-global;
+        }
+      }
+
+      .lose{
+        color: #00000041;
+        transition: $transition-global;
+        body.dark &{
+          color:#646262;
+          transition: $transition-global;
+        }
+      }
     }
   }
 
@@ -372,5 +399,7 @@ main {
     }
   }
 }
+
+
 
 
