@@ -3,12 +3,13 @@ main {
   display: flex;
   width: 100%;
   min-width: 320px;
-  height: 75vh;
+  height: 78vh;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: start;
+  justify-content: space-evenly;
   align-items: center;
   transition: $transition-global;
+
 
   body.dark &{
     background-color: $secondary-color-dark;
@@ -32,7 +33,7 @@ main {
     font-weight: normal;
     line-height: 83px;
     color: $primary-font-color-light;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 3rem;
     transition: $transition-global;
 
@@ -42,7 +43,7 @@ main {
       box-shadow: $shadow-dark-outside;
       transition: $transition-global;
     }
-
+   
     @include media(mobile) {
       width: 40rem;
     }
@@ -56,6 +57,7 @@ main {
       margin-top: 12rem;
       margin-bottom: 9rem;
     }
+    
   }
 
   .button-light {
@@ -84,7 +86,9 @@ main {
       color: $secondary-font-color-dark;
       transition: $transition-global;
     }
-  
+
+   
+    
     @include media(mobile) {
       width: 25rem;
     }
@@ -124,6 +128,20 @@ main {
     text-align: center;
     transition: $transition-global;
 
+    @include media(desktop-h){
+      font-size: 4rem;
+    }
+
+    @include media(desktop-h1){
+      font-size: 6rem;
+      margin-bottom: 3rem;
+    }
+
+    @include media(desktop-h2){
+      font-size: 7rem;
+      margin-bottom: 4rem;
+    }
+
     body.dark &{
       color:$primary-font-color-dark;
       transition: $transition-global;
@@ -138,6 +156,23 @@ main {
     border: 1px #8c8c8d solid;
     box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.65), 10px 10px 10px rgba(0, 0, 0, 0.25);
     transition: $transition-global;
+
+    @include media(desktop-h){
+      width: 32rem;
+      height: 33rem;
+      margin-bottom: .5rem;
+    }
+
+    @include media(desktop-h1){
+      width: 36rem;
+      height: 37rem;
+      margin-bottom: .5rem;
+    }
+    @include media(desktop-h2){
+      width: 40rem;
+      height: 41rem;
+      margin-bottom: .7rem;
+    }
 
     body.dark &{
       background-color: $secondary-color-dark;
@@ -156,6 +191,22 @@ main {
       padding: 1.5rem;
       transition: $transition-global;
 
+      @include media(desktop-h){
+        width: 32rem;
+        height: 33rem;
+      }
+
+      @include media(desktop-h1){
+        width: 36rem;
+        height: 37rem;
+        margin-bottom: .5rem;
+      }
+      @include media(desktop-h2){
+        width: 40rem;
+        height: 41rem;
+        margin-bottom: .7rem;
+      }
+
       body.dark &{
         background-color: $secondary-color-dark;
         box-shadow: inset -3px -3px 20px rgba(255, 255, 255, 0.3), inset 10px 10px 15px ;
@@ -169,6 +220,10 @@ main {
         color: $secondary-font-color-light;
         border: none;
         transition: $transition-global;
+
+        @include media(desktop-h1){
+          font-size: 8rem;
+        }
 
         body.dark &{
           color: $secondary-font-color-dark;
@@ -204,6 +259,10 @@ main {
     margin-top: 1.2rem;
     transition: $transition-global;
 
+    @include media(desktop-h2){
+      margin-top: 1rem;
+    }
+
     .score-title{
       display: grid;
       grid-template-columns: 1fr .5fr 1fr;
@@ -228,6 +287,9 @@ main {
         color: $primary-font-color-light;
         font-weight:600;
         transition: $transition-global;
+        @include media(desktop-h2){
+          font-size: 2.5rem;
+        }
 
         body.dark &{
           color:$primary-font-color-dark;
@@ -242,6 +304,26 @@ main {
       grid-template-columns: 1fr .5fr 1fr;
       margin-top: 0.5rem;
       transition: $transition-global;
+
+      @include media(desktop-h2){
+        margin-bottom: 1.6rem;
+      }
+
+      .Player1-points{
+        @include media(mobile){
+          justify-self:end ;
+          padding-right: 5rem;
+         transition: $transition-global;
+        }
+      }
+
+      .Player2-points{
+        @include media(mobile){
+          justify-self:start ;
+          padding-left: 5rem;
+         transition: $transition-global;
+        }
+      }
 
       b{
         justify-self: center; 
@@ -265,6 +347,17 @@ main {
     font-size: 2.5rem; 
     display: flex;
     transition: $transition-global;
+
+    @include media(desktop-h1){
+      width: 15rem;;
+      height: 4rem;
+    }
+    @include media(desktop-h2){
+      width: 20rem;
+      height: 5rem;
+      font-size: 3.5rem;
+      margin-top: 1rem;
+    }
     b{
       align-self: center;
       width: 100%;

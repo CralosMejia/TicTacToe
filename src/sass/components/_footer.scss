@@ -1,7 +1,7 @@
 footer {
     width: 100%;
     min-width: 320px;
-    height: 18vh;
+    height: 15vh;
     background-color: $tertiary-color-light;
     border-top: 3px solid rgba(0, 0, 0, 0.05);
     box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.3);
@@ -11,22 +11,24 @@ footer {
     padding-bottom: 3rem;
     transition: $transition-global;
 
+
+
     body.dark &{
       background-color: $secondary-color-dark;
       transition: $transition-global;
     }
 
     a{
-      margin-top: .7rem;
+      margin-top: 1.8rem;
+      text-align: center;
     }
 
     i {
-      width: 5.4rem;
-      height: 5.4rem;
       font-size: 5rem;
       color: black;
       cursor: pointer;
       transition: $transition-global;
+
 
       body.dark &{
         color: $secondary-font-color-dark;

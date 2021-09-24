@@ -17,7 +17,7 @@ body {
 /* Media Queries Mixin
 **********************/
 header {
-  height: 6rem;
+  height: 10vh;
   width: 100%;
   min-width: 320px;
   display: -webkit-box;
@@ -152,16 +152,16 @@ main {
   display: flex;
   width: 100%;
   min-width: 320px;
-  height: 75vh;
+  height: 78vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -190,7 +190,7 @@ main .title {
   font-weight: normal;
   line-height: 83px;
   color: #39cde2;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 3rem;
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
@@ -211,15 +211,6 @@ body.dark main .title {
 @media only screen and (min-width: 800px) {
   main .title {
     width: 65rem;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  main .title {
-    width: 75rem;
-    font-size: 6rem;
-    padding-top: 1rem;
-    margin-top: 12rem;
-    margin-bottom: 9rem;
   }
 }
 main .button-light {
@@ -261,13 +252,6 @@ body.dark main .button-light {
     width: 35.6rem;
   }
 }
-@media only screen and (min-width: 1000px) {
-  main .button-light {
-    width: 40.6rem;
-    font-size: 4rem;
-    margin-bottom: 3rem;
-  }
-}
 main .button-light:hover {
   background-color: #c7c9cf;
   -webkit-transition: 600ms;
@@ -294,6 +278,23 @@ main .title-turn {
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }
+@media only screen and (min-height: 650px) {
+  main .title-turn {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-height: 750px) {
+  main .title-turn {
+    font-size: 6rem;
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (min-height: 800px) {
+  main .title-turn {
+    font-size: 7rem;
+    margin-bottom: 4rem;
+  }
+}
 body.dark main .title-turn {
   color: #57D2D8;
   -webkit-transition: 0.5s ease all;
@@ -309,6 +310,27 @@ main .container-board {
           box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.65), 10px 10px 10px rgba(0, 0, 0, 0.25);
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
+}
+@media only screen and (min-height: 650px) {
+  main .container-board {
+    width: 32rem;
+    height: 33rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (min-height: 750px) {
+  main .container-board {
+    width: 36rem;
+    height: 37rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (min-height: 800px) {
+  main .container-board {
+    width: 40rem;
+    height: 41rem;
+    margin-bottom: 0.7rem;
+  }
 }
 body.dark main .container-board {
   background-color: rgba(44, 47, 52, 0.9);
@@ -369,6 +391,26 @@ main .container-board .container-board-into > *:nth-child(9) {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
 }
+@media only screen and (min-height: 650px) {
+  main .container-board .container-board-into {
+    width: 32rem;
+    height: 33rem;
+  }
+}
+@media only screen and (min-height: 750px) {
+  main .container-board .container-board-into {
+    width: 36rem;
+    height: 37rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (min-height: 800px) {
+  main .container-board .container-board-into {
+    width: 40rem;
+    height: 41rem;
+    margin-bottom: 0.7rem;
+  }
+}
 body.dark main .container-board .container-board-into {
   background-color: rgba(44, 47, 52, 0.9);
   -webkit-box-shadow: inset -3px -3px 20px rgba(255, 255, 255, 0.3), inset 10px 10px 15px;
@@ -384,6 +426,11 @@ main .container-board .container-board-into .button-xo {
   border: none;
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
+}
+@media only screen and (min-height: 750px) {
+  main .container-board .container-board-into .button-xo {
+    font-size: 8rem;
+  }
 }
 body.dark main .container-board .container-board-into .button-xo {
   color: #CCCFD4;
@@ -426,6 +473,11 @@ main .score {
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }
+@media only screen and (min-height: 800px) {
+  main .score {
+    margin-top: 1rem;
+  }
+}
 main .score .score-title {
   display: -ms-grid;
   display: grid;
@@ -460,6 +512,11 @@ main .score .score-title b {
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }
+@media only screen and (min-height: 800px) {
+  main .score .score-title b {
+    font-size: 2.5rem;
+  }
+}
 body.dark main .score .score-title b {
   color: #57D2D8;
   -webkit-transition: 0.5s ease all;
@@ -473,6 +530,29 @@ main .score .score-points {
   margin-top: 0.5rem;
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
+}
+@media only screen and (min-height: 800px) {
+  main .score .score-points {
+    margin-bottom: 1.6rem;
+  }
+}
+@media only screen and (min-width: 480px) {
+  main .score .score-points .Player1-points {
+    -ms-grid-column-align: end;
+        justify-self: end;
+    padding-right: 5rem;
+    -webkit-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+  }
+}
+@media only screen and (min-width: 480px) {
+  main .score .score-points .Player2-points {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    padding-left: 5rem;
+    -webkit-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+  }
 }
 main .score .score-points b {
   -ms-grid-column-align: center;
@@ -499,6 +579,20 @@ main .button-back {
   -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
 }
+@media only screen and (min-height: 750px) {
+  main .button-back {
+    width: 15rem;
+    height: 4rem;
+  }
+}
+@media only screen and (min-height: 800px) {
+  main .button-back {
+    width: 20rem;
+    height: 5rem;
+    font-size: 3.5rem;
+    margin-top: 1rem;
+  }
+}
 main .button-back b {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -518,7 +612,7 @@ body.dark main .button-back b {
 footer {
   width: 100%;
   min-width: 320px;
-  height: 18vh;
+  height: 15vh;
   background-color: rgba(138, 146, 165, 0.05);
   border-top: 3px solid rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: -8px -10px 15px rgba(255, 255, 255, 0.3);
@@ -542,11 +636,10 @@ body.dark footer {
   transition: 0.5s ease all;
 }
 footer a {
-  margin-top: 0.7rem;
+  margin-top: 1.8rem;
+  text-align: center;
 }
 footer i {
-  width: 5.4rem;
-  height: 5.4rem;
   font-size: 5rem;
   color: black;
   cursor: pointer;
