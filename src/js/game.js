@@ -2,13 +2,13 @@ const labelPlayer2 = document.querySelector(".Player2");
 const labelPlayer1Points = document.querySelector(".Player1-points");
 const labeltiePoints = document.querySelector(".tie-points");
 const labelPlayer2Points = document.querySelector(".Player2-points");
-const labelTitleTurn=document.querySelector(".title-turn");
+const labelTitleTurn = document.querySelector(".title-turn");
 
 let contPonitsPlayer1 = parseInt(labelPlayer1Points.textContent);
 let contPonitstie = parseInt(labeltiePoints.textContent);
 let contPonitsPlayer2 = parseInt(labelPlayer2Points.textContent);
 
-let secondPlayer=undefined;
+let secondPlayer = undefined;
 
 //-------botones
 const btnPosition1 = document.querySelector(".position-1");
@@ -25,16 +25,17 @@ const listBtn = [btnPosition1, btnPosition2, btnPosition3, btnPosition4, btnPosi
 //----------------------------Variables
 let turn = 1;
 let winGame = false;
+let typeOfgame = localStorage.getItem('typeOfgame');
 
 //---------------------Game mode
 function modeGame() {
-    if (localStorage.getItem('typeOfgame') === "1") {
-        secondPlayer="Computer"
+    if (typeOfgame === "1") {
+        secondPlayer = "Computer"
         labelPlayer2.innerHTML = "PC(o)";
         labelPlayer2.style.marginLeft = '3.8rem';
         labelPlayer2.style.transition = 'none';
-    } else if (localStorage.getItem('typeOfgame') === "2") {
-        secondPlayer="Player Two"
+    } else if (typeOfgame === "2") {
+        secondPlayer = "Player Two"
         labelPlayer2.innerHTML = "Player Two(o)";
     }
 }
@@ -43,11 +44,11 @@ modeGame();
 //---------------------------------Game
 function gameTurn() {
     if (turn === 1) {
-        labelTitleTurn.innerHTML=secondPlayer; 
+        if(typeOfgame === '2')labelTitleTurn.innerHTML = secondPlayer;
         turn = 2;
         return "x";
     } else {
-        labelTitleTurn.innerHTML="Player One";
+        if(typeOfgame === '2')labelTitleTurn.innerHTML = "Player One";
         turn = 1;
         return "o";
     }
@@ -76,6 +77,31 @@ function updateScore(winner) {
         contPonitstie++;
         labeltiePoints.innerHTML = contPonitstie;
     }
+}
+
+function playPC() {
+    let turnPc = false;
+    do {
+        let randomNum = Math.floor(Math.random()*10);
+        if (listBtn[randomNum].textContent === "") {
+            window.setTimeout(() => {
+                listBtn[randomNum].innerHTML = "o";
+                gameTurn();
+                winGame = validationWinGame();
+                turnPc = false;
+            }, 100);
+        } else {
+            window.setTimeout(() => {
+                if (validationGameFinished()) {
+                    console.log('funco')
+                    turnPc = false;
+                } else {
+                    turnPc = true;
+                }
+            }, 900);
+
+        }
+    } while (turnPc === true)
 }
 
 function validationWinGame() {
@@ -185,7 +211,7 @@ function validationWinGame() {
 }
 
 
-function validationGameFinished(a) {
+function validationGameFinished() {
     if ((btnPosition1.textContent !== ""
         && btnPosition2.textContent !== ""
         && btnPosition3.textContent !== ""
@@ -199,123 +225,42 @@ function validationGameFinished(a) {
         : false) {
         updateScore("");
         cleanBoard();
+        return true;
+    } else {
+        return false
     }
 
 }
 
+function game(i) {
+    if (winGame) {
+        cleanBoard();
+        if (labelTitleTurn.textContent === 'Computer') {
+            playPC();
+        }
+    } else if (listBtn[i].textContent === "") {
+        listBtn[i].innerHTML = gameTurn();
+        winGame = validationWinGame();
+        if (typeOfgame === '1') {
+            playPC();
+        }
+    } else {
+        validationGameFinished();
+    }
+}
+
+{
+    
+}
+
 //----------------------Btn Listeners------------------
-btnPosition1.addEventListener('click', () => {
-    if (winGame) {
-        cleanBoard();
-    }
-    else if (btnPosition1.textContent === "") {
-        btnPosition1.innerHTML = gameTurn();
-        winGame = validationWinGame();
-    } else {
-        validationGameFinished();
-    }
-});
 
-
-btnPosition2.addEventListener('click', () => {
-    if (winGame) {
-        cleanBoard();
-    }
-    else if (btnPosition2.textContent === "") {
-        btnPosition2.innerHTML = gameTurn();
-        winGame = validationWinGame();
-    } else {
-        validationGameFinished();
-    }
-});
-
-
-btnPosition3.addEventListener('click', () => {
-    if (winGame) {
-        cleanBoard();
-    }
-    else if (btnPosition3.textContent === "") {
-        btnPosition3.innerHTML = gameTurn();
-        winGame = validationWinGame();
-    } else {
-        validationGameFinished();
-    }
-});
-
-
-btnPosition4.addEventListener('click', () => {
-    if (winGame) {
-        cleanBoard();
-    }
-    else if (btnPosition4.textContent === "") {
-        btnPosition4.innerHTML = gameTurn();
-        winGame = validationWinGame();
-    } else {
-        validationGameFinished();
-    }
-});
-
-
-btnPosition5.addEventListener('click', () => {
-    if (winGame) {
-        cleanBoard();
-    }
-    else if (btnPosition5.textContent === "") {
-        btnPosition5.innerHTML = gameTurn();
-        winGame = validationWinGame();
-    } else {
-        validationGameFinished();
-    }
-});
-
-
-btnPosition6.addEventListener('click', () => {
-    if (winGame) {
-        cleanBoard();
-    }
-    else if (btnPosition6.textContent === "") {
-        btnPosition6.innerHTML = gameTurn();
-        winGame = validationWinGame();
-    } else {
-        validationGameFinished();
-    }
-});
-
-
-btnPosition7.addEventListener('click', () => {
-    if (winGame) {
-        cleanBoard();
-    }
-    else if (btnPosition7.textContent === "") {
-        btnPosition7.innerHTML = gameTurn();
-        winGame = validationWinGame();
-    } else {
-        validationGameFinished();
-    }
-});
-
-
-btnPosition8.addEventListener('click', () => {
-    if (winGame) {
-        cleanBoard();
-    }
-    else if (btnPosition8.textContent === "") {
-        btnPosition8.innerHTML = gameTurn();
-        winGame = validationWinGame();
-    } else {
-        validationGameFinished();
-    }
-});
-
-
-btnPosition9.addEventListener('click', () => {
-    if (winGame) {
-        cleanBoard();
-    }
-    else if (btnPosition9.textContent === "") {
-        btnPosition9.innerHTML = gameTurn();
-        winGame = validationWinGame();
-    } else {
-        validationGameFinished();
-    }
-});
+btnPosition1.addEventListener('click', () => { game(0) });
+btnPosition2.addEventListener('click', () => { game(1) });
+btnPosition3.addEventListener('click', () => { game(2) });
+btnPosition4.addEventListener('click', () => { game(3) });
+btnPosition5.addEventListener('click', () => { game(4) });
+btnPosition6.addEventListener('click', () => { game(5) });
+btnPosition7.addEventListener('click', () => { game(6) });
+btnPosition8.addEventListener('click', () => { game(7) });
+btnPosition9.addEventListener('click', () => { game(8) });
