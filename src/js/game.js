@@ -44,13 +44,18 @@ modeGame();
 //---------------------------------Game
 function gameTurn() {
     if (turn === 1) {
-        if(typeOfgame === '2')labelTitleTurn.innerHTML = secondPlayer;
+        if (typeOfgame === '2') labelTitleTurn.innerHTML = secondPlayer;
         turn = 2;
         return "x";
     } else {
-        if(typeOfgame === '2')labelTitleTurn.innerHTML = "Player One";
         turn = 1;
-        return "o";
+        if (typeOfgame === '2') {
+            labelTitleTurn.innerHTML = "Player One";
+            return "o";
+        } else {
+            console.log("jajaj");
+            playPC();
+        }
     }
 }
 
@@ -82,24 +87,15 @@ function updateScore(winner) {
 function playPC() {
     let turnPc = false;
     do {
-        let randomNum = Math.floor(Math.random()*10);
+        let randomNum = Math.floor(Math.random() * 9);
         if (listBtn[randomNum].textContent === "") {
             window.setTimeout(() => {
                 listBtn[randomNum].innerHTML = "o";
-                gameTurn();
-                winGame = validationWinGame();
-                turnPc = false;
+                winGame=validationWinGame();
             }, 100);
+            break;
         } else {
-            window.setTimeout(() => {
-                if (validationGameFinished()) {
-                    console.log('funco')
-                    turnPc = false;
-                } else {
-                    turnPc = true;
-                }
-            }, 900);
-
+            turnPc = true;
         }
     } while (turnPc === true)
 }
@@ -223,8 +219,10 @@ function validationGameFinished() {
         && btnPosition9.textContent !== "")
         ? true
         : false) {
-        updateScore("");
-        cleanBoard();
+        if (typeOfgame === '2') {
+            updateScore("");
+            cleanBoard();
+        }
         return true;
     } else {
         return false
@@ -232,35 +230,40 @@ function validationGameFinished() {
 
 }
 
-function game(i) {
+function gameTwoPlayer(i) {
     if (winGame) {
         cleanBoard();
-        if (labelTitleTurn.textContent === 'Computer') {
-            playPC();
-        }
     } else if (listBtn[i].textContent === "") {
         listBtn[i].innerHTML = gameTurn();
         winGame = validationWinGame();
-        if (typeOfgame === '1') {
-            playPC();
-        }
     } else {
         validationGameFinished();
     }
 }
-
-{
-    
+function gameOnePlayer(i) {
+    if(winGame){
+        cleanBoard();
+    }
+    else if (validationGameFinished()) {
+        updateScore("");
+        cleanBoard();
+    }
+    else if (listBtn[i].textContent === "") {
+        listBtn[i].innerHTML = "x";
+        winGame=validationWinGame();
+        if (validationGameFinished() === false && !winGame) {
+            playPC();
+        }
+    }
 }
-
 //----------------------Btn Listeners------------------
 
-btnPosition1.addEventListener('click', () => { game(0) });
-btnPosition2.addEventListener('click', () => { game(1) });
-btnPosition3.addEventListener('click', () => { game(2) });
-btnPosition4.addEventListener('click', () => { game(3) });
-btnPosition5.addEventListener('click', () => { game(4) });
-btnPosition6.addEventListener('click', () => { game(5) });
-btnPosition7.addEventListener('click', () => { game(6) });
-btnPosition8.addEventListener('click', () => { game(7) });
-btnPosition9.addEventListener('click', () => { game(8) });
+btnPosition1.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(0) : gameOnePlayer(0); });
+btnPosition2.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(1) : gameOnePlayer(1); });
+btnPosition3.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(2) : gameOnePlayer(2); });
+btnPosition4.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(3) : gameOnePlayer(3); });
+btnPosition5.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(4) : gameOnePlayer(4); });
+btnPosition6.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(5) : gameOnePlayer(5); });
+btnPosition7.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(6) : gameOnePlayer(6); });
+btnPosition8.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(7) : gameOnePlayer(7); });
+btnPosition9.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(9) : gameOnePlayer(8); });
