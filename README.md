@@ -13,7 +13,7 @@ This project has only one CSS file which was processed from several .scss files,
 - The third one contains all the game logic.
 
 ## Demo
-If you want to try the game, clicked [here.](http://www.youtube.com "here.")
+If you want to try the game, clicked [here.](https://cralosmejia.github.io/TicTacToe/ "here.")
 
 ##Photos of Game
 This project has a dark and light mode.
