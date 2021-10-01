@@ -15,7 +15,7 @@ This project has only one CSS file which was processed from several .scss files,
 ## Demo
 If you want to try the game, clicked [here.](https://cralosmejia.github.io/TicTacToe/ "here.")
 
-##Photos of Game
+## Photos of Game
 This project has a dark and light mode.
 
 #### Light Mode
