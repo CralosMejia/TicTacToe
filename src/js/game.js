@@ -266,4 +266,4 @@ btnPosition5.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPla
 btnPosition6.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(5) : gameOnePlayer(5); });
 btnPosition7.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(6) : gameOnePlayer(6); });
 btnPosition8.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(7) : gameOnePlayer(7); });
-btnPosition9.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(9) : gameOnePlayer(8); });
+btnPosition9.addEventListener('click', () => { (typeOfgame === '2') ? gameTwoPlayer(8) : gameOnePlayer(8); });
