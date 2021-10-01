@@ -6,20 +6,20 @@ const btnBack=document.getElementById("button-back-id");
 if(btnPlayerOne !== null && btnPlayerTwo !==null){
     btnPlayerOne.addEventListener('click',()=>{
         localStorage.setItem('typeOfgame',1);
-        window.open("../html/game.html");
+        window.open("./src/html/game.html");
         window.close();
     });
     
     btnPlayerTwo.addEventListener('click',()=>{
         localStorage.setItem('typeOfgame',2);
         this.window.close();
-        window.open("../html/game.html");
+        window.open("./src/html/game.html");
     });
 }else{
     btnBack.addEventListener('click',()=>{
         localStorage.setItem('typeOfgame',0);
         this.window.close();
-        window.open("../html/index.html");
+        window.open("../../index.html");
     });
 }
 
