@@ -19,13 +19,23 @@ If you want to try the game, clicked [here.](http://www.youtube.com "here.")
 This project has a dark and light mode.
 
 #### Light Mode
-[![Light Mode main page](Light Mode main page "Light Mode main page")](https://i.ibb.co/LZzVMWP/Capture.jpg "Light Mode main page")
 
-[![Light Mode game](Light Mode game "Light Mode game")](https://i.ibb.co/dDTHtYb/Capture1.jpg "Light Mode game")
+Light mode main page
+
+![Light Mode main page](https://i.ibb.co/5n3tSJz/Capture-RM.jpg "Light Mode main page")
+
+laght mode game
+
+![Light Mode game](https://i.ibb.co/YkL3Lgz/Capture1-RM.jpg "Light Mode game")
 
 #### Dark Mode
-[![Dark Mode main page](Dark Mode main page "Dark Mode main page")](https://i.ibb.co/VtmHZxz/Capture-Dark.jpg "Dark Mode main page")
 
-[![Dark Mode game](Dark Mode game "Dark Mode game")](https://i.ibb.co/rwHHWd7/Capture-Dark1.jpg "Dark Mode game")
+Dark mode main page
+
+![Dark Mode main page](https://i.ibb.co/n88DFkB/Capture-Dark-RM.jpg "Dark Mode main page")
+
+Dark mode game
+
+![Dark Mode game](https://i.ibb.co/RHWfPSg/Capture-Dark1-RM.jpg "Dark Mode game")
 
 # END
